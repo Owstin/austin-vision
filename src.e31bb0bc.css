@@ -1,0 +1,128 @@
+html,
+body {
+  font-size: 24px;
+  background-color: hsl(0, 0%, 80%);
+  font-family: sans-serif;
+}
+
+:root {
+  --top-margin: 40px;
+  --black: hsla(0, 0%, 0%, 85%);
+  --white: hsla(0, 100%, 100%, 85%);
+  --navy: hsla(237, 77%, 29%, 85%);
+  --green: hsla(125, 100%, 23%, 85%);
+  --purple: hsla(265, 100%, 46%, 85%);
+  --red: hsla(0, 67%, 51%, 85%);
+  --goldenrod: hsla(48, 97%, 49%, 95%);
+  --tan: hsla(42, 45%, 38%, 85%);
+  --brown: hsla(31, 43%, 23%, 85%);
+  --lima: hsla(77, 71%, 41%, 85%);
+}
+
+#austin-vision {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--top-margin);
+}
+
+.numbers {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.zero {
+  color: var(--black);
+}
+
+.glow.zero {
+  text-shadow: 0px 2px 4px var(--black);
+}
+
+.one {
+  color: var(--white);
+}
+
+.glow.one {
+  text-shadow: 0px 2px 4px var(--white);
+}
+
+.two {
+  color: var(--navy);
+}
+
+.glow.two {
+  text-shadow: 0px 2px 4px var(--navy);
+}
+
+.three {
+  color: var(--green);
+}
+
+.glow.three {
+  text-shadow: 0px 2px 4px var(--green);
+}
+
+.four {
+  color: var(--purple);
+}
+
+.glow.four {
+  text-shadow: 0px 2px 4px var(--purple);
+}
+
+.five {
+  color: var(--red);
+}
+
+.glow.five {
+  text-shadow: 0px 2px 4px var(--red);
+}
+
+.six {
+  color: var(--goldenrod);
+}
+
+.glow.six {
+  text-shadow: 0px 2px 4px var(--goldenrod);
+}
+
+.seven {
+  color: var(--tan);
+}
+
+.glow.seven {
+  text-shadow: 0px 2px 4px var(--tan);
+}
+
+.eight {
+  color: var(--brown);
+}
+
+.glow.eight {
+  text-shadow: 0px 2px 4px var(--brown);
+}
+
+.nine {
+  color: var(--lima);
+}
+
+.glow.nine {
+  text-shadow: 0px 2px 4px var(--lima);
+}
+
+.display {
+  text-align: center;
+}
+
+#input {
+  margin-top: var(--top-margin);
+}
+
+.output-container {
+  margin-top: 40px;
+  font-size: var(--top-margin);
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
