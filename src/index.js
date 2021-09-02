@@ -22,8 +22,31 @@ const formatNumberString = numbers =>
     .map(num => `<span class=${numberMap[num]}>${num}</span>`)
     .join("");
 
+const randomNum = (() => {
+  const cache = [];
+  return () => {
+    const value = Math.floor(Math.random() * 10);
+    if (cache.includes(value)) {
+      return randomNum();
+    }
+
+    cache.push(value);
+    if (cache.length > 3) {
+      cache.shift();
+    }
+    return value;
+  };
+})();
+
 const inputChange = event => {
+  const randomBorder = `border-${numberMap[randomNum()]}`;
+  inputElement.className = randomBorder;
   outputElement.innerHTML = formatNumberString(event.target.value);
 };
 
+const removeInputBorderClass = () => {
+  inputElement.className = "";
+};
+
 inputElement.addEventListener("input", inputChange);
+inputElement.addEventListener("blur", removeInputBorderClass);
