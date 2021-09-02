@@ -194,16 +194,8 @@ module.hot.accept(reloadCSS);
 
 require("./styles/numbers.css");
 
-var formElement = document.getElementById("form");
 var inputElement = document.getElementById("input");
 var outputElement = document.getElementById("output");
-var numberString;
-var formattedOutput;
-
-var inputChange = function inputChange(event) {
-  numberString = event.target.value;
-};
-
 var numberMap = {
   0: "zero",
   1: "one",
@@ -217,16 +209,17 @@ var numberMap = {
   9: "nine"
 };
 
-var submitForm = function submitForm(event) {
-  event.preventDefault();
-  formattedOutput = numberString.split("").map(function (num) {
+var formatNumberString = function formatNumberString(numbers) {
+  return numbers.split("").map(function (num) {
     return "<span class=".concat(numberMap[num], ">").concat(num, "</span>");
   }).join("");
-  outputElement.innerHTML = formattedOutput;
+};
+
+var inputChange = function inputChange(event) {
+  outputElement.innerHTML = formatNumberString(event.target.value);
 };
 
 inputElement.addEventListener("input", inputChange);
-formElement.addEventListener("submit", submitForm);
 },{"./styles/numbers.css":"styles/numbers.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -255,7 +248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57340" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60113" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
