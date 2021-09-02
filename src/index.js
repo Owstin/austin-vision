@@ -1,15 +1,7 @@
 import "./styles/numbers.css";
 
-const formElement = document.getElementById("form");
 const inputElement = document.getElementById("input");
 const outputElement = document.getElementById("output");
-
-let numberString;
-let formattedOutput;
-
-const inputChange = event => {
-  numberString = event.target.value;
-};
 
 const numberMap = {
   0: "zero",
@@ -24,15 +16,14 @@ const numberMap = {
   9: "nine",
 };
 
-const submitForm = event => {
-  event.preventDefault();
-  formattedOutput = numberString
+const formatNumberString = numbers =>
+  numbers
     .split("")
     .map(num => `<span class=${numberMap[num]}>${num}</span>`)
     .join("");
 
-  outputElement.innerHTML = formattedOutput;
+const inputChange = event => {
+  outputElement.innerHTML = formatNumberString(event.target.value);
 };
 
 inputElement.addEventListener("input", inputChange);
-formElement.addEventListener("submit", submitForm);
