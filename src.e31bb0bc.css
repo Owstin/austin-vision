@@ -54,12 +54,20 @@ body {
   text-shadow: 0px 2px 4px var(--white);
 }
 
+.border-one {
+  border: 2px solid var(--black);
+}
+
 .two {
   color: var(--navy);
 }
 
 .glow.two {
   text-shadow: 0px 2px 4px var(--navy);
+}
+
+.border-two {
+  border: 2px solid var(--white);
 }
 
 .three {
@@ -70,12 +78,20 @@ body {
   text-shadow: 0px 2px 4px var(--green);
 }
 
+.border-three {
+  border: 2px solid var(--green);
+}
+
 .four {
   color: var(--purple);
 }
 
 .glow.four {
   text-shadow: 0px 2px 4px var(--purple);
+}
+
+.border-four {
+  border: 2px solid var(--purple);
 }
 
 .five {
@@ -86,12 +102,20 @@ body {
   text-shadow: 0px 2px 4px var(--red);
 }
 
+.border-five {
+  border: 2px solid var(--red);
+}
+
 .six {
   color: var(--goldenrod);
 }
 
 .glow.six {
   text-shadow: 0px 2px 4px var(--goldenrod);
+}
+
+.border-six {
+  border: 2px solid var(--goldenrod);
 }
 
 .seven {
@@ -102,12 +126,20 @@ body {
   text-shadow: 0px 2px 4px var(--tan);
 }
 
+.border-seven {
+  border: 2px solid var(--tan);
+}
+
 .eight {
   color: var(--brown);
 }
 
 .glow.eight {
   text-shadow: 0px 2px 4px var(--brown);
+}
+
+.border-eight {
+  border: 2px solid var(--brown);
 }
 
 .nine {
@@ -118,6 +150,10 @@ body {
   text-shadow: 0px 2px 4px var(--lima);
 }
 
+.border-nine {
+  border: 2px solid var(--lima);
+}
+
 .display {
   overflow-wrap: break-all;
 }
@@ -125,7 +161,14 @@ body {
 #input {
   margin-top: var(--top-margin);
   width: 100%;
-  padding: 4px;
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 0.666667rem;
+}
+
+#input:focus {
+  outline: none;
 }
 
 .output-container {
